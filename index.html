@@ -1,74 +1,451 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://i.postimg.cc/xdjzqRxg/letra-u.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Urbankicks</title>
-  </head>
-  <body>
-  <header class="bg-white dark:bg-gray-900">
-    <nav class="bg-white dark:bg-gray-900">
-        <div class="container flex flex-col items-center p-6 mx-auto">
-            <a href="#" class="mx-auto ">
-                <img class="w-auto  sm:h-10" src="https://i.postimg.cc/xdjzqRxg/letra-u.png"   alt="LOGO">
-            </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <title>Tienda de Zapatos</title>
+  
 
-            <div class="flex items-center justify-center mt-6 text-gray-600 capitalize dark:text-gray-300">
-                <a href="#" class="mx-2 text-gray-800 border-b-2 border-blue-500 dark:text-gray-200 sm:mx-6">home</a>
 
-                <a href="#" class="mx-2 border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 sm:mx-6">Nosotros</a>
+</head>
 
-                <a href="#" class="mx-2 border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 sm:mx-6">Productos</a>
+<body class="relative min-h-screen text-slate-900">
+  <div class="fixed inset-0 -z-10 bg-gradient-to-br from-indigo-200 via-white to-lime-100"></div>
 
-                <a href="#" class="mx-2 border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 sm:mx-6">Contacto</a>
-            </div>
+
+  <header class="w-full">
+  
+
+<nav class="bg-gradient-to-r from-blue-200 to-stone-100 border-b border-slate-300 fixed w-full z-50">
+
+  <div class="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
+
+    <a href="index.html" class="flex items-center gap-2">
+  <img
+    src="https://i.postimg.cc/xdjzqRxg/letra-u.png"
+    alt="Logo UrbanKicks"
+    class="w-8 h-8 object-contain"
+  />
+  <span class="font-semibold">UrbanKicks</span>
+</a>
+
+
+    <ul class="hidden md:flex gap-8 text-sm font-medium">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="catalogo.html" class="font-semibold">Catálogo</a></li>
+      <li><a href="Contactanos.html">Contáctanos</a></li>
+    </ul>
+
+    <!-- CARRITO -->
+    <button class="relative">
+      <i class="fa-solid fa-cart-shopping text-lg"></i>
+      <span class="absolute -top-2 -right-2 bg-slate-900 text-white text-xs rounded-full px-2">
+        0
+      </span>
+    </button>
+
+  </div>
+</nav>
+<div class="h-20"></div>
+
+
+
+  </header>
+
+
+
+  <!-- HERO -->
+  <section class="max-w-screen-xl mx-auto px-4 py-10">
+    <div class="grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 px-3 py-1 text-xs font-medium">
+          Nuevas colecciones 2026
+        </span>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
+          Tus zapatillas favoritas: Nike, Adidas y Puma en un solo lugar
+        </h1>
+        <p class="mt-3 text-slate-600">
+          Compra rápido, entrega segura y precios top. Elige tu estilo: sport, urbano o casual.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#productos" class="inline-flex items-center justify-center rounded-lg bg-slate-950 text-white px-5 py-3 text-sm font-medium hover:opacity-90">
+            Ver productos
+          </a>
+          
         </div>
-    </nav>
 
-    <div class="container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-        <div class="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
-            <div class="flex justify-center order-2 mt-6 lg:mt-0 lg:space-y-3 lg:flex-col">
-                <button class="w-3 h-3 mx-2 bg-blue-500 rounded-full lg:mx-0 focus:outline-none"></button>
-                <button class="w-3 h-3 mx-2 bg-gray-300 rounded-full lg:mx-0 focus:outline-none hover:bg-blue-500"></button>
-                <button class="w-3 h-3 mx-2 bg-gray-300 rounded-full lg:mx-0 focus:outline-none hover:bg-blue-500"></button>
-                <button class="w-3 h-3 mx-2 bg-gray-300 rounded-full lg:mx-0 focus:outline-none hover:bg-blue-500"></button>
-            </div>
-
-            <div class="max-w-lg lg:mx-12 lg:order-2">
-                <h1 class="text-3xl font-semibold tracking-wide text-gray-800 dark:text-white lg:text-4xl">The best Apple Watch apps</h1>
-                <p class="mt-4 text-gray-600 dark:text-gray-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut quia asperiores alias vero magnam recusandae adipisci ad vitae laudantium quod rem voluptatem eos accusantium cumque.</p>
-                <div class="mt-6">
-                    <a href="#" class="px-6 py-2.5 mt-6 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-500 lg:mx-0 lg:w-auto focus:outline-none">Download from App Store</a>
-                </div>
-            </div>
+        <!-- mini stats -->
+        <div class="mt-7 grid grid-cols-3 gap-3 text-center">
+          <div class="rounded-xl bg-white border border-slate-200 p-3">
+            <p class="text-lg font-semibold">Tenemos Muchos</p>
+            <p class="text-xs text-slate-500">Modelos</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-3">
+            <p class="text-lg font-semibold">24/7</p>
+            <p class="text-xs text-slate-500">Conectados para ti</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-3">
+            <p class="text-lg font-semibold">100%</p>
+            <p class="text-xs text-slate-500">Originales</p>
+          </div>
         </div>
+      </div>
 
-        <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
-            <img class="object-cover w-full h-full max-w-2xl rounded-md" src="https://i.postimg.cc/9f8Hjmwt/nik.jpg" alt="apple watch photo">
-        </div>
+   <div class="relative">
+  <!-- Carrusel  -->
+  <div id="hero-carousel" class="relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm"
+       data-carousel="slide">
+
+    <!-- Slides -->
+    <div class="relative h-[320px] sm:h-[420px] overflow-hidden rounded-2xl">
+      <!-- Slide 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img class="absolute block w-full h-full object-cover border border-black"
+             src="https://i.postimg.cc/wTr93tLD/JS1694-HM6.avif"
+             alt="Zapatillas 1">
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img class="absolute block w-full h-full object-cover border border-black"
+             src="https://i.postimg.cc/J04RHZpc/JP9249-HM3-hover.avif"
+             alt="Zapatillas 2">
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img class="absolute block w-full h-full object-cover border border-black"
+             src="https://i.postimg.cc/XNkH1wp0/pexels-sole-heaven-1013230921-20298291.jpg"
+             alt="Zapatillas 3">
+      </div>
     </div>
-</header>
+
+    <!-- Controles -->
+    <button type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/80 border border-black group-hover:bg-white">
+        <svg class="w-4 h-4 text-black" viewBox="0 0 6 10" fill="none" aria-hidden="true">
+          <path d="M5 1 1 5l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="sr-only">Anterior</span>
+      </span>
+    </button>
+
+    <button type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/80 border border-black group-hover:bg-white">
+        <svg class="w-4 h-4 text-black" viewBox="0 0 6 10" fill="none" aria-hidden="true">
+          <path d="m1 9 4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="sr-only">Siguiente</span>
+      </span>
+    </button>
+  </div>
+
+  <!--  cartelito -->
+<div class="absolute -bottom-4 -left-4 z-40 bg-white border border-slate-200 rounded-xl p-4 shadow-sm hidden sm:block">
+    <p class="text-sm font-semibold">Envío gratis</p>
+    <p class="text-xs text-slate-500">en compras desde $60</p>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section id="marcas" class="max-w-screen-xl mx-auto px-4 pb-8">
+    <h2 class="text-xl font-semibold">Las Marcas mas populares</h2>
+    <p class="text-sm text-slate-600 mt-1">Elige por marca y mira lo nuevo.</p>
+
+    <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Card  -->
+      <a href="#" class="block p-5 bg-white border border-black rounded-2xl hover:shadow-sm">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Nike</h3>
+          <span class="text-xs bg-slate-950 text-white px-2 py-1 rounded-full">Mas vendidas</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">Air, Dunk, Running y más.</p>
+      </a>
+
+      <a href="#" class="block p-5 bg-white border border-black rounded-2xl hover:shadow-sm">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Adidas</h3>
+          <span class="text-xs bg-indigo-600 text-white px-2 py-1 rounded-full">Comodidad</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">Ultraboost, Samba, Originals.</p>
+      </a>
+
+      <a href="#" class="block p-5 bg-white border border-black rounded-2xl hover:shadow-sm">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Puma</h3>
+          <span class="text-xs bg-emerald-600 text-white px-2 py-1 rounded-full">Accecible</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">Urbano, sport y casual.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="productos" class="max-w-screen-xl mx-auto px-4 pb-12">
+    <div class="flex items-end justify-between gap-4">
+  <div>
+    <h2 class="text-xl font-semibold">Productos destacados</h2>
+    <p class="text-sm text-slate-600 mt-1">
+      Una grilla simple para tu tienda.
+    </p>
+  </div>
+
+  <a
+    href="catalogo.html"
+    class="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white px-5 py-2 text-sm font-medium hover:opacity-90 transition"
+  >
+    Ver más
+    <svg xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M9 5l7 7-7 7" />
+    </svg>
+  </a>
+
+  <!-- Dropdown  -->
+  <div
+    id="dropdownFilter"
+    class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+  >
+    <ul class="py-2 text-sm text-gray-700">
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Nike</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Adidas</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Puma</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Running</a></li>
+    </ul>
+  </div>
+</div>
 
 
+    <!-- Grid -->
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- Product card  -->
+      <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-slate-900 hover:shadow-xl">
+
+  <div class="relative overflow-hidden">
+    <img class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+      src="https://i.postimg.cc/8Cv1W1Nn/403647-NAT.jpg"
+      alt="Nike Air Runner">
+
+    <span class="absolute top-3 left-3 bg-slate-900 text-white text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+      Popular
+    </span>
+  </div>
+
+  <div class="p-4 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-400">Nike</p>
+    <h3 class="mt-1 text-base font-semibold text-slate-900">Nike Air Runner</h3>
+    <p class="mt-1 text-xs text-slate-500">Tendencia actual</p>
+  </div>
+
+</div>
 
 
+      <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-slate-900 hover:shadow-xl">
+
+  <div class="relative overflow-hidden">
+    <img class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+      src="https://i.postimg.cc/pVpsBygL/JH7988-01-00-standard.avif"
+      alt="Nike Air Runner">
+
+    <span class="absolute top-3 left-3 bg-slate-900 text-white text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+      Popular
+    </span>
+  </div>
+
+  <div class="p-4 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-400">Nike</p>
+    <h3 class="mt-1 text-base font-semibold text-slate-900">Nike For One</h3>
+    <p class="mt-1 text-xs text-slate-500">Tendencia actual</p>
+  </div>
+
+</div>
 
 
+      <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-slate-900 hover:shadow-xl">
+
+  <div class="relative overflow-hidden">
+    <img class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+      src="https://i.postimg.cc/7h9P6mD1/310024-WHP.jpg"
+      alt="Nike Air Runner">
+
+    <span class="absolute top-3 left-3 bg-slate-900 text-white text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+      Popular
+    </span>
+  </div>
+
+  <div class="p-4 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-400">Nike</p>
+    <h3 class="mt-1 text-base font-semibold text-slate-900">Nike Airs two hold</h3>
+    <p class="mt-1 text-xs text-slate-500">Tendencia actual</p>
+  </div>
+
+</div>
 
 
+     <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-slate-900 hover:shadow-xl">
 
+  <div class="relative overflow-hidden">
+    <img class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+      src="https://i.postimg.cc/tJbqz82x/JR3776-01-00-standard.avif"
+      alt="Nike Air Runner">
 
+    <span class="absolute top-3 left-3 bg-slate-900 text-white text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+      Popular
+    </span>
+  </div>
 
+  <div class="p-4 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-400">Nike</p>
+    <h3 class="mt-1 text-base font-semibold text-slate-900">Nike Rot twolve</h3>
+    <p class="mt-1 text-xs text-slate-500">Tendencia actual</p>
+  </div>
 
+</div>
 
+     <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-slate-900 hover:shadow-xl">
 
+  <div class="relative overflow-hidden">
+    <img class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+      src="https://i.postimg.cc/3xmts6Bx/JS2918-01-00-standard.avif"
+      alt="Nike Air Runner">
 
+    <span class="absolute top-3 left-3 bg-slate-900 text-white text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+      Popular
+    </span>
+  </div>
 
+  <div class="p-4 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-400">Nike</p>
+    <h3 class="mt-1 text-base font-semibold text-slate-900">Nike Root Games</h3>
+    <p class="mt-1 text-xs text-slate-500">Tendencia actual</p>
+  </div>
 
+</div>
 
+      <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-slate-900 hover:shadow-xl">
 
-    
-    <script type="module" src="./src/js/main.js"></script>
-  </body>
+  <div class="relative overflow-hidden">
+    <img class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+      src="https://i.postimg.cc/xdjFL5K4/JQ2007-01-00-standard.avif"
+      alt="Nike Air Runner">
+
+    <span class="absolute top-3 left-3 bg-slate-900 text-white text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+      Popular
+    </span>
+  </div>
+
+  <div class="p-4 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-400">Nike</p>
+    <h3 class="mt-1 text-base font-semibold text-slate-900">Adidas Riot Brach</h3>
+    <p class="mt-1 text-xs text-slate-500">Tendencia actual</p>
+  </div>
+
+</div>
+
+     <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-slate-900 hover:shadow-xl">
+
+  <div class="relative overflow-hidden">
+    <img class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+      src="https://i.postimg.cc/q7x5WYGF/50SFA0122-AI6-01.avif"
+      alt="Nike Air Runner">
+
+    <span class="absolute top-3 left-3 bg-slate-900 text-white text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+      Popular
+    </span>
+  </div>
+
+  <div class="p-4 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-400">Nike</p>
+    <h3 class="mt-1 text-base font-semibold text-slate-900">Puma Continers</h3>
+    <p class="mt-1 text-xs text-slate-500">Tendencia actual</p>
+  </div>
+
+</div>
+
+     <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-slate-900 hover:shadow-xl">
+
+  <div class="relative overflow-hidden">
+    <img class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+      src="https://nikeclprod.vteximg.com.br/arquivos/ids/637532-1000-1000/DD9304_005_A_PREM-hei-3144-wid-3144-fmt.jpg?v=638078764438830000"
+      alt="Nike Air Runner">
+
+    <span class="absolute top-3 left-3 bg-slate-900 text-white text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+      Popular
+    </span>
+  </div>
+
+  <div class="p-4 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-400">Nike</p>
+    <h3 class="mt-1 text-base font-semibold text-slate-900">Nike Lol Ruts</h3>
+    <p class="mt-1 text-xs text-slate-500">Tendencia actual</p>
+  </div>
+
+</div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gradient-to-r from-blue-200 to-stone-100 border-t border-slate-200">
+
+    <div class="max-w-screen-xl mx-auto px-4 py-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+        
+        <div>
+          <img
+    src="https://i.postimg.cc/xdjzqRxg/letra-u.png"
+    alt="Logo UrbanKicks"
+    class="w-8 h-8 object-contain"
+  />
+          <p class="font-semibold">UrbanKicks</p>
+          <p class="text-slate-600 mt-2">La mejor para ti</p>
+        </div>
+        <div>
+          <p class="font-semibold">Secciones</p>
+          <ul class="mt-2 space-y-2 text-slate-600">
+            <li><a href="#productos" class="hover:text-slate-950">Productos</a></li>
+            <li><a href="#marcas" class="hover:text-slate-950">Marcas</a></li>
+            <li><a href="#stores" class="hover:text-slate-950">Tiendas</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold">Ayuda</p>
+          <ul class="mt-2 space-y-2 text-slate-600">
+            <li><a href="#help" class="hover:text-slate-950">Soporte</a></li>
+            <li><a href="#help" class="hover:text-slate-950">Envíos</a></li>
+            <li><a href="#help" class="hover:text-slate-950">Devoluciones</a></li>
+          </ul>
+        </div>
+        <div>
+        
+          
+        </div>
+      </div>
+
+      <div class="mt-6 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
+        
+        <p>los mejores en la venta de zapatos</p>
+        <p>si te gusto Contactanos</p>
+      </div>
+    </div>
+  </footer>
+
+<script type="module" src="/src/js/main.js"></script>
+
+</body>
 </html>

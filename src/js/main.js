@@ -1,2 +1,3 @@
-import '../css/style.css'; 
-import 'flowbite';
+import '../css/style.css'
+import 'flowbite'
+
