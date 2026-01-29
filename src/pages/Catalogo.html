@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="es" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="https://i.postimg.cc/xdjzqRxg/letra-u.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,881 +15,777 @@
   <div class="fixed inset-0 -z-10 bg-gradient-to-br from-indigo-200 via-white to-lime-100"></div>
 
 
-<!-- NAVBAR -->
-<nav class="bg-gradient-to-r from-blue-200 to-stone-100 border-b border-slate-300 fixed w-full z-50">
-   <div class="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
+  <!-- NAVBAR -->
+  <nav class="bg-gradient-to-r from-blue-200 to-stone-100 border-b border-slate-300 fixed w-full z-50">
+    <div class="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
 
-    <a href="/TallerPractico2/src/pages/Catalogo.html" class="flex items-center gap-2">
-  <img
-    src="https://i.postimg.cc/xdjzqRxg/letra-u.png"
-    alt="Logo UrbanKicks"
-    class="w-8 h-8 object-contain"
+      <a href="/TallerPractico2/src/pages/Catalogo.html" class="flex items-center gap-2">
+        <img src="https://i.postimg.cc/xdjzqRxg/letra-u.png" alt="Logo UrbanKicks" class="w-8 h-8 object-contain" />
+        <span class="font-semibold">UrbanKicks</span>
+      </a>
+
+
+      <ul class="hidden md:flex gap-8 text-sm font-medium">
+        <li>
+          <a href="/index.html" class="hover:text-slate-950">Inicio</a>
+        </li>
+
+        <li>
+          <a href="nosotros.html" class="hover:text-slate-950">Nosotros</a>
+        </li>
+
+        <li>
+          <a href="catalogo.html" class="hover:text-slate-950 font-semibold">Catálogo </a>
+        </li>
+
+        <li>
+          <a href="Contactanos.html" class="hover:text-slate-950">Contáctanos</a>
+        </li>
+      </ul>
+
+
+      <button class="relative">
+        <i class="fa-solid fa-cart-shopping text-lg"></i>
+        <span class="absolute -top-2 -right-2 bg-slate-900 text-white text-xs rounded-full px-2">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="h-20"></div>
+
+  <!-- HEADER -->
+  <header class="max-w-screen-xl mx-auto px-4 py-10">
+    <h1 class="text-3xl md:text-4xl font-extrabold">Catálogo de zapatos</h1>
+    <p class="mt-2 text-slate-600">Encuentra tu estilo ideal.</p>
+
+    <!--  -->
+    <div class="mt-6 max-w-xl flex items-center gap-10">
+
+      <!-- SEARCH -->
+      <div class="relative flex-1">
+  <svg class="absolute left-3 top-3 w-5 h-5 text-slate-400"
+    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1116.65 1.5a7.5 7.5 0 010 15z" />
+  </svg>
+
+  <input
+    id="buscador"
+    type="text"
+    placeholder="Buscar zapatos..."
+    class="w-full p-3 ps-10 text-sm border border-slate-300 rounded-xl focus:ring-slate-900 focus:border-slate-900"
   />
-  <span class="font-semibold">UrbanKicks</span>
-</a>
-
-
-    <ul class="hidden md:flex gap-8 text-sm font-medium">
-  <li>
-    <a href="/index.html" class="hover:text-slate-950">Inicio</a>
-  </li>
-
-  <li>
-    <a href="nosotros.html" class="hover:text-slate-950">Nosotros</a>
-  </li>
-
-  <li>
-    <a href="catalogo.html" class="hover:text-slate-950 font-semibold">Catálogo </a>
-  </li>
-
-  <li>
-    <a href="Contactanos.html" class="hover:text-slate-950">Contáctanos</a>
-  </li>
-</ul>
-
-
-    <button class="relative">
-      <i class="fa-solid fa-cart-shopping text-lg"></i>
-      <span class="absolute -top-2 -right-2 bg-slate-900 text-white text-xs rounded-full px-2">0</span>
-    </button>
-  </div>
-</nav>
-
-<div class="h-20"></div>
-
-<!-- HEADER -->
-<header class="max-w-screen-xl mx-auto px-4 py-10">
-  <h1 class="text-3xl md:text-4xl font-extrabold">Catálogo de zapatos</h1>
-  <p class="mt-2 text-slate-600">Encuentra tu estilo ideal.</p>
-
-  <!--  -->
-<div class="mt-6 max-w-xl flex items-center gap-10">
-
-  <!-- SEARCH -->
-  <div class="relative flex-1">
-    <svg class="absolute left-3 top-3 w-5 h-5 text-slate-400"
-      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1116.65 1.5a7.5 7.5 0 010 15z" />
-    </svg>
-
-    <input
-      type="text"
-      placeholder="Buscar zapatos..."
-      class="w-full p-3 ps-10 text-sm border border-slate-300 rounded-xl focus:ring-slate-900 focus:border-slate-900"
-    />
-  </div>
-
-  <!-- CARRITO -->
-  <button
-    class="relative p-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 transition">
-
-    <!-- ICONO FLOWBITE -->
-    <svg class="w-6 h-6 text-slate-700"
-      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.2 6M17 13l1.2 6M9 21a1 1 0 100-2 1 1 0 000 2zm8 1a1 1 0 100-2 1 1 0 000 2z" />
-    </svg>
-
-  
-  </button>
-
 </div>
 
+      <!-- CARRITO -->
+      <button class="relative p-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 transition">
 
-  <!-- BOTONES -->
-  <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- ICONO FLOWBITE -->
+        <svg class="w-6 h-6 text-slate-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.2 6M17 13l1.2 6M9 21a1 1 0 100-2 1 1 0 000 2zm8 1a1 1 0 100-2 1 1 0 000 2z" />
+        </svg>
 
-    <a href="#hombres" class="group p-5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white flex justify-between hover:scale-[1.02] transition">
-      <div>
-        <p class="text-xs opacity-80">Colección</p>
-        <h3 class="text-lg font-bold">Hombres</h3>
+
+      </button>
+
+    </div>
+
+
+    <!-- BOTONES -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+      <a href="#hombres"
+        class="group p-5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white flex justify-between hover:scale-[1.02] transition">
+        <div>
+          <p class="text-xs opacity-80">Colección</p>
+          <h3 class="text-lg font-bold">Hombres</h3>
+        </div>
+        <i class="fa-solid fa-person text-2xl"></i>
+      </a>
+
+      <a href="#mujeres"
+        class="group p-5 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 text-white flex justify-between hover:scale-[1.02] transition">
+        <div>
+          <p class="text-xs opacity-80">Colección</p>
+          <h3 class="text-lg font-bold">Mujeres</h3>
+        </div>
+        <i class="fa-solid fa-person-dress text-2xl"></i>
+      </a>
+
+      <a href="#ninos"
+        class="group p-5 rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-600 text-white flex justify-between hover:scale-[1.02] transition">
+        <div>
+          <p class="text-xs opacity-80">Colección</p>
+          <h3 class="text-lg font-bold">Niños</h3>
+        </div>
+        <i class="fa-solid fa-child text-2xl"></i>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- CATALOGO -->
+  <section id="catalogo" class="max-w-screen-xl mx-auto px-4 pb-20">
+
+    <!-- HOMBRES -->
+    <h2 id="hombres" class="mt-16 mb-6 text-2xl font-extrabold flex items-center gap-2">
+      <i class="fa-solid fa-shoe-prints text-slate-800"></i>
+      Hombres
+    </h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- tarjeta -->
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+         transition-all duration-300
+         hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
+         hover:border-slate-900">
+
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/XqRZ3ZvW/JI3163-04-standard.avif" alt="Adidas">
+
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
+
+          <h3 class="font-semibold">
+            Tenis Campus OOs
+          </h3>
+
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$99.99</span>
+
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+               hover:bg-slate-800 transition">
+              Agregar
+            </button>
+          </div>
+        </div>
       </div>
-      <i class="fa-solid fa-person text-2xl"></i>
-    </a>
 
-    <a href="#mujeres" class="group p-5 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 text-white flex justify-between hover:scale-[1.02] transition">
-      <div>
-        <p class="text-xs opacity-80">Colección</p>
-        <h3 class="text-lg font-bold">Mujeres</h3>
+
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+         transition-all duration-300
+         hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
+         hover:border-slate-900">
+
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/8Cv1W1Nn/403647-NAT.jpg" alt="Skechers">
+
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Skechers</p>
+
+          <h3 class="font-semibold">
+            Skechers Uno Gen1
+          </h3>
+
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$50.00</span>
+
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+               hover:bg-slate-800 transition">
+              Agregar
+            </button>
+          </div>
+        </div>
       </div>
-      <i class="fa-solid fa-person-dress text-2xl"></i>
-    </a>
 
-    <a href="#ninos" class="group p-5 rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-600 text-white flex justify-between hover:scale-[1.02] transition">
-      <div>
-        <p class="text-xs opacity-80">Colección</p>
-        <h3 class="text-lg font-bold">Niños</h3>
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+         transition-all duration-300
+         hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
+         hover:border-slate-900">
+
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/4NFZSK3c/Tenis-casuales-de-piel-Palermo.avif"
+          alt="Puma Palermo">
+
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Puma</p>
+
+          <h3 class="font-semibold">
+            Puma Palermo Lth
+          </h3>
+
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$70.00</span>
+
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+               hover:bg-slate-800 transition">
+              Agregar
+            </button>
+          </div>
+        </div>
       </div>
-      <i class="fa-solid fa-child text-2xl"></i>
-    </a>
 
-  </div>
-</header>
-
-<!-- CATALOGO -->
-<section id="catalogo" class="max-w-screen-xl mx-auto px-4 pb-20">
-
-  <!-- HOMBRES -->
-<h2 id="hombres" class="mt-16 mb-6 text-2xl font-extrabold flex items-center gap-2">
-  <i class="fa-solid fa-shoe-prints text-slate-800"></i>
-  Hombres
-</h2>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    <!-- tarjeta -->
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/XqRZ3ZvW/JI3163-04-standard.avif"
-    alt="Adidas">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/vm5sT3tj/Speedcat-Plus-Sneakers.avif"
+          alt="Puma Speedcat Plus">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Puma</p>
 
-    <h3 class="font-semibold">
-      Tenis Campus OOs
-    </h3>
+          <h3 class="font-semibold">
+            Puma Speedcat Plus
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$99.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$150</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/8Cv1W1Nn/403647-NAT.jpg"
-    alt="Skechers">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/PfSkCL1t/Roma-24-Sneakers.avif"
+          alt="Puma Roma 24">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Skechers</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Puma</p>
 
-    <h3 class="font-semibold">
-      Skechers Uno Gen1
-    </h3>
+          <h3 class="font-semibold">
+            Puma Roma 24
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$50.00</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$105</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/4NFZSK3c/Tenis-casuales-de-piel-Palermo.avif"
-    alt="Puma Palermo">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/XqfLyBDR/Skate-Old-Skool-Wafflecup-Shoe.avif"
+          alt="Vans Skate">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Puma</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Vans</p>
 
-    <h3 class="font-semibold">
-      Puma Palermo Lth
-    </h3>
+          <h3 class="font-semibold">
+            Vans Skate New
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$70.00</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$59.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/vm5sT3tj/Speedcat-Plus-Sneakers.avif"
-    alt="Puma Speedcat Plus">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/Y08vLpMG/Authentic-Shoe.avif"
+          alt="Vans Old Skool">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Puma</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Vans</p>
 
-    <h3 class="font-semibold">
-      Puma Speedcat Plus
-    </h3>
+          <h3 class="font-semibold">
+            Vans Skate Old Skool Wafflecup
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$150</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$59.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-   <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/PfSkCL1t/Roma-24-Sneakers.avif"
-    alt="Puma Roma 24">
+        <img class="h-44 w-full object-cover"
+          src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?q=80&w=1200&auto=format&fit=crop"
+          alt="Puma Urban Flex">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Puma</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Puma</p>
 
-    <h3 class="font-semibold">
-      Puma Roma 24
-    </h3>
+          <h3 class="font-semibold">
+            Urban Flex
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$105</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$59.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+    </div>
+
+    <!-- MUJERES -->
+    <h2 id="mujeres" class="mt-16 mb-6 text-2xl font-extrabold flex items-center gap-2">
+      <i class="fa-solid fa-person-dress text-pink-600"></i>
+      Mujeres
+    </h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/XqfLyBDR/Skate-Old-Skool-Wafflecup-Shoe.avif"
-    alt="Vans Skate">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/pVpsBygL/JH7988-01-00-standard.avif"
+          alt="Adidas Crazquick">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Vans</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold">
-      Vans Skate New
-    </h3>
+          <h3 class="font-semibold">
+            Crazquick LS Padel W
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$59.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$64.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-   <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/Y08vLpMG/Authentic-Shoe.avif"
-    alt="Vans Old Skool">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/7h9P6mD1/310024-WHP.jpg" alt="Skechers Uno">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Vans</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Skechers</p>
 
-    <h3 class="font-semibold">
-      Vans Skate Old Skool Wafflecup
-    </h3>
+          <h3 class="font-semibold">
+            Skechers Uno
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$59.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$64.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-   <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?q=80&w=1200&auto=format&fit=crop"
-    alt="Puma Urban Flex">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/rwKyV1Hr/177190-MVE.jpg"
+          alt="Skechers Arch Fit Arcade">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Puma</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Skechers</p>
 
-    <h3 class="font-semibold">
-      Urban Flex
-    </h3>
+          <h3 class="font-semibold">
+            Skechers Arch Fit Arcade
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$59.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$64.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-  </div>
-
-  <!-- MUJERES -->
-<h2 id="mujeres" class="mt-16 mb-6 text-2xl font-extrabold flex items-center gap-2">
-  <i class="fa-solid fa-person-dress text-pink-600"></i>
-  Mujeres
-</h2>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/pVpsBygL/JH7988-01-00-standard.avif"
-    alt="Adidas Crazquick">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/q7x5WYGF/50SFA0122-AI6-01.avif"
+          alt="Lacoste L003 Neo Shot">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Lacoste</p>
 
-    <h3 class="font-semibold">
-      Crazquick LS Padel W
-    </h3>
+          <h3 class="font-semibold">
+            L003 Neo Shot
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$64.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$64.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/7h9P6mD1/310024-WHP.jpg"
-    alt="Skechers Uno">
+        <img class="h-44 w-full object-cover"
+          src="https://i.postimg.cc/1zYVJRq1/Speedcat-Ballet-Suede-Women-s-Sneakers.avif" alt="Speedcat Ballet Suede">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Skechers</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Nike</p>
 
-    <h3 class="font-semibold">
-      Skechers Uno
-    </h3>
+          <h3 class="font-semibold">
+            Speedcat Ballet Suede
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$64.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$64.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/rwKyV1Hr/177190-MVE.jpg"
-    alt="Skechers Arch Fit Arcade">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/xjmN32Tc/JQ8409-01-00-standard.avif"
+          alt="Adidas Japan Decon">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Skechers</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold">
-      Skechers Arch Fit Arcade
-    </h3>
+          <h3 class="font-semibold">
+            Tenis Japan Decon
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$64.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$64.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/q7x5WYGF/50SFA0122-AI6-01.avif"
-    alt="Lacoste L003 Neo Shot">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/cLxKWt7r/JS3179-01-00-standard.avif"
+          alt="Adidas Amplimove">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Lacoste</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold">
-      L003 Neo Shot
-    </h3>
+          <h3 class="font-semibold">
+            Tenis de training Amplimove
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$64.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$64.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/1zYVJRq1/Speedcat-Ballet-Suede-Women-s-Sneakers.avif"
-    alt="Speedcat Ballet Suede">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/TwsDtdB4/IE6986-04-standard.avif"
+          alt="Nike Street Woman">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Nike</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Nike</p>
 
-    <h3 class="font-semibold">
-      Speedcat Ballet Suede
-    </h3>
+          <h3 class="font-semibold">
+            Street Woman
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$64.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$64.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+    </div>
+
+    <h2 id="ninos" class="mt-16 mb-6 text-2xl font-extrabold flex items-center gap-2">
+      <i class="fa-solid fa-baby text-indigo-600"></i>
+      Niños
+    </h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/xjmN32Tc/JQ8409-01-00-standard.avif"
-    alt="Adidas Japan Decon">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/tJbqz82x/JR3776-01-00-standard.avif"
+          alt="Adidas Pixar Cars">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold">
-      Tenis Japan Decon
-    </h3>
+          <h3 class="font-semibold leading-snug">
+            Tenis adidas Pixar Cars Adifom Samba 360 para Niños
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$64.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$84.60</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/cLxKWt7r/JS3179-01-00-standard.avif"
-    alt="Adidas Amplimove">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/QNqh34fp/JQ1337-01-00-standard.avif"
+          alt="Adidas Pixar Cars Superstar II">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold">
-      Tenis de training Amplimove
-    </h3>
+          <h3 class="font-semibold leading-snug">
+            Tenis adidas Pixar Cars Superstar II con Cierre Cómodo para Niños
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$64.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$99.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/TwsDtdB4/IE6986-04-standard.avif"
-    alt="Nike Street Woman">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/3xmts6Bx/JS2918-01-00-standard.avif"
+          alt="Tenis Ultradream DNA Kids">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Nike</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold">
-      Street Woman
-    </h3>
+          <h3 class="font-semibold">
+            Tenis Ultradream DNA Kids
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$64.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$39.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-  </div>
-
-<h2 id="ninos" class="mt-16 mb-6 text-2xl font-extrabold flex items-center gap-2">
-  <i class="fa-solid fa-baby text-indigo-600"></i>
-  Niños
-</h2>
-
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/tJbqz82x/JR3776-01-00-standard.avif"
-    alt="Adidas Pixar Cars">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/y6GnkBQw/GW6439-01-standard.avif"
+          alt="Tenis Tensaur">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold leading-snug">
-      Tenis adidas Pixar Cars Adifom Samba 360 para Niños
-    </h3>
+          <h3 class="font-semibold leading-snug">
+            Tenis Tensaur Tira Ajustable de Cierre por Contacto
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$84.60</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$130</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/QNqh34fp/JQ1337-01-00-standard.avif"
-    alt="Adidas Pixar Cars Superstar II">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/mZqYwjsx/GV9544-01-00-standard.avif"
+          alt="Tenis Everyset">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold leading-snug">
-      Tenis adidas Pixar Cars Superstar II con Cierre Cómodo para Niños
-    </h3>
+          <h3 class="font-semibold">
+            Tenis de training Everyset
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$99.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$140</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/3xmts6Bx/JS2918-01-00-standard.avif"
-    alt="Tenis Ultradream DNA Kids">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/mk49FX9p/Basket-Bow-Toddlers-Sneakers.avif"
+          alt="Kids Run">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold">
-      Tenis Ultradream DNA Kids
-    </h3>
+          <h3 class="font-semibold">
+            Kids Run
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$39.99</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$79.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/y6GnkBQw/GW6439-01-standard.avif"
-    alt="Tenis Tensaur">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/xdjFL5K4/JQ2007-01-00-standard.avif"
+          alt="Adidas Samba OG Kids">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold leading-snug">
-      Tenis Tensaur Tira Ajustable de Cierre por Contacto
-    </h3>
+          <h3 class="font-semibold leading-snug">
+            TENIS CON PRÁCTICO CIERRE Y CORDONES ELÁSTICOS ADIDAS LIBERTY LONDON SAMBA OG
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$130</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$59.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden
          transition-all duration-300
          hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
          hover:border-slate-900">
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/mZqYwjsx/GV9544-01-00-standard.avif"
-    alt="Tenis Everyset">
+        <img class="h-44 w-full object-cover" src="https://i.postimg.cc/Wb6nSrb3/JR8134-01-00-standard.avif"
+          alt="Adidas Minnie Mouse">
 
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
+        <div class="p-4">
+          <p class="text-xs text-slate-500">Adidas</p>
 
-    <h3 class="font-semibold">
-      Tenis de training Everyset
-    </h3>
+          <h3 class="font-semibold leading-snug">
+            Tenis adidas Disney Minnie Mouse Grand Court Niños
+          </h3>
 
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$140</span>
+          <div class="flex justify-between mt-2 items-center">
+            <span class="font-semibold">$39.99</span>
 
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
+            <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
                hover:bg-slate-800 transition">
-        Agregar
-      </button>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
 
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
-         transition-all duration-300
-         hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
-         hover:border-slate-900">
+  </section>
 
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/mk49FX9p/Basket-Bow-Toddlers-Sneakers.avif"
-    alt="Kids Run">
-
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
-
-    <h3 class="font-semibold">
-      Kids Run
-    </h3>
-
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$79.99</span>
-
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
-               hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
-
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
-         transition-all duration-300
-         hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
-         hover:border-slate-900">
-
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/xdjFL5K4/JQ2007-01-00-standard.avif"
-    alt="Adidas Samba OG Kids">
-
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
-
-    <h3 class="font-semibold leading-snug">
-      TENIS CON PRÁCTICO CIERRE Y CORDONES ELÁSTICOS ADIDAS LIBERTY LONDON SAMBA OG
-    </h3>
-
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$59.99</span>
-
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
-               hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
-
-    <div
-  class="bg-white border border-slate-200 rounded-2xl overflow-hidden
-         transition-all duration-300
-         hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02]
-         hover:border-slate-900">
-
-  <img
-    class="h-44 w-full object-cover"
-    src="https://i.postimg.cc/Wb6nSrb3/JR8134-01-00-standard.avif"
-    alt="Adidas Minnie Mouse">
-
-  <div class="p-4">
-    <p class="text-xs text-slate-500">Adidas</p>
-
-    <h3 class="font-semibold leading-snug">
-      Tenis adidas Disney Minnie Mouse Grand Court Niños
-    </h3>
-
-    <div class="flex justify-between mt-2 items-center">
-      <span class="font-semibold">$39.99</span>
-
-      <button
-        class="bg-slate-900 text-white px-3 py-1 rounded-lg text-sm
-               hover:bg-slate-800 transition">
-        Agregar
-      </button>
-    </div>
-  </div>
-</div>
-
-  </div>
-
-</section>
-
-<footer class="bg-gradient-to-r from-blue-200 to-stone-100 border-t border-slate-200">
+  <footer class="bg-gradient-to-r from-blue-200 to-stone-100 border-t border-slate-200">
 
     <div class="max-w-screen-xl mx-auto px-4 py-8">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-        
+
         <div>
-          <img
-    src="https://i.postimg.cc/xdjzqRxg/letra-u.png"
-    alt="Logo UrbanKicks"
-    class="w-8 h-8 object-contain"
-  />
+          <img src="https://i.postimg.cc/xdjzqRxg/letra-u.png" alt="Logo UrbanKicks" class="w-8 h-8 object-contain" />
           <p class="font-semibold">UrbanKicks</p>
           <p class="text-slate-600 mt-2">La mejor para ti</p>
         </div>
@@ -909,20 +806,22 @@
           </ul>
         </div>
         <div>
-        
-          
+
+
         </div>
       </div>
 
-      <div class="mt-6 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
-        
+      <div
+        class="mt-6 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
+
         <p>los mejores en la venta de zapatos</p>
         <p>si te gusto Contactanos</p>
       </div>
     </div>
   </footer>
-<script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/catalogo.js"></script>
 
 
 </body>
+
 </html>
