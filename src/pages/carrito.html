@@ -7,107 +7,39 @@
     <title>Carrito de compras</title>
   </head>
   <body>
-    <!--Nav-->
-    <nav class="bg-slate-900 border-b border-cyan-900/50 sticky top-0 z-50">
-      <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-      >
-        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <span
-            class="self-center text-2xl font-black whitespace-nowrap text-cyan-400 tracking-tighter"
-          >E-Libro</span>
-          </span>
+   
+   <nav class="bg-gradient-to-r from-blue-200 to-stone-100 border-b border-slate-300 fixed w-full z-50">
+
+      <div class="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
+
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="https://i.postimg.cc/xdjzqRxg/letra-u.png" alt="Logo UrbanKicks" class="w-8 h-8 object-contain" />
+          <span class="font-semibold">UrbanKicks</span>
         </a>
 
-        <div
-          class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center gap-4"
-        >
-          <a
-            href="/src/pages/carrito.html"
-            class="relative bg-slate-800 p-2 rounded-full border border-slate-700 hover:border-cyan-500 transition group"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-white group-hover:text-cyan-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-              />
-            </svg>
-            <span
-              id="carrito-contador"
-              class="absolute -top-1 -right-1 bg-cyan-500 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center text-white"
-            >
-              0
-            </span>
+
+        <ul class="hidden md:flex gap-8 text-sm font-medium">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="./src/pages/Nosotros.html">Nosotros</a></li>
+          <li><a href="./src/pages/Catalogo.html" class="font-semibold">Catálogo</a></li>
+          <li><a href="./src/pages/Contactanos.html">Contáctanos</a></li>
+          
+        </ul>
+
+        <!-- CARRITO -->
+        <button class="relative">
+          <a href="/src/pages/carrito.html">
+            <i class="fa-solid fa-cart-shopping text-lg"> </i>
           </a>
 
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-slate-800 focus:outline-none"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-slate-800 rounded-lg bg-slate-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent"
-          >
-            <li>
-              <a
-                href="/index.html"
-                class="block py-2 px-3 text-cyan-400 rounded-sm md:p-0 font-bold"
-                >Inicio</a
-              >
-            </li>
-            <li>
-              <a
-                href="/src/pages/nosotros.html"
-                class="block py-2 px-3 text-white rounded-sm hover:text-cyan-400 md:p-0 transition"
-                >Nosotros</a
-              >
-            </li>
-            <li>
-              <a
-                href="/src/pages/libros.html"
-                class="block py-2 px-3 text-white rounded-sm hover:text-cyan-400 md:p-0 transition"
-                >Libros</a
-              >
-            </li>
-            <li>
-              <a
-                href="/src/pages/contacto.html"
-                class="block py-2 px-3 text-white rounded-sm hover:text-cyan-400 md:p-0 transition"
-                >Contacto</a>
-            </li>
-          </ul>
-        </div>
+          <span class="absolute -top-2 -right-2 bg-slate-900 text-white text-xs rounded-full px-2">
+            0
+          </span>
+        </button>
       </div>
     </nav>
 
+    <div class="h-20"></div>
     <!--CARRITO-->
     <br>
     <!--CARRITO-->
