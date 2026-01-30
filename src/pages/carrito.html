@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="es">
-  <head>
 
-
-
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://i.postimg.cc/xdjzqRxg/letra-u.png"/>
+    <link rel="icon" type="image/svg+xml" href="https://i.postimg.cc/xdjzqRxg/letra-u.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de compras - UrbanKicks</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body class="bg-slate-50">
+
+    <!--nav-->
     <nav class="bg-gradient-to-r from-blue-200 to-stone-100 border-b border-slate-300 fixed w-full z-50">
         <div class="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
@@ -27,7 +28,8 @@
             <div class="relative cursor-pointer">
                 <a href="carrito.html">
                     <i class="fa-solid fa-cart-shopping text-xl text-slate-800"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-slate-900 text-white text-[10px] font-bold rounded-full px-1.5 min-w-[18px] text-center">
+                    <span id="cart-count"
+                        class="absolute -top-2 -right-2 bg-slate-900 text-white text-[10px] font-bold rounded-full px-1.5 min-w-[18px] text-center">
                         0
                     </span>
                 </a>
@@ -42,21 +44,70 @@
             Tu <span class="text-black">Carrito</span>
         </h1>
 
-        <div id="lista-carrito" class="space-y-1">
+        <!-- Tarjeta  -->
+        <div class="bg-gradient-to-r from-blue-200 to-stone-100 border border-slate-300 rounded-xl shadow-md p-6">
+
+            <div id="lista-carrito" class="space-y-1">
             </div>
 
-        <div class="mt-10 border-t-2 border-slate-200 pt-6 flex justify-between items-center">
-            <span class="text-xl font-bold text-slate-700">Total:</span>
-            <span id="total-compra" class="text-4xl font-black text-orange-600">$0.00</span>
-        </div>
+            <div class="mt-10 border-t-2 border-slate-200 pt-6 flex justify-between items-center">
+                <span class="text-xl font-bold text-slate-700">Total:</span>
+                <span id="total-compra" class="text-4xl font-black text-orange-600">$0.00</span>
+            </div>
 
-        <div class="mt-8 flex justify-start">
-            <button id="btn-limpiar" class="bg-orange-400 hover:bg-orange-500 text-orange-950 font-bold py-2 px-6 rounded transition-all shadow-sm">
-                Limpiar Carrito
-            </button>
+            <div class="mt-8 flex justify-center">
+                <button id="btn-limpiar"
+                    class="bg-orange-400 hover:bg-orange-500 text-orange-950 font-bold py-2 px-6 rounded transition-all shadow-sm">
+                    Limpiar Carrito
+                </button>
+            </div>
+
         </div>
     </main>
 
+    <footer class="bg-gradient-to-r from-blue-200 to-stone-100 border-t border-slate-200">
+
+        <div class="max-w-screen-xl mx-auto px-4 py-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+
+                <div>
+                    <img src="https://i.postimg.cc/xdjzqRxg/letra-u.png" alt="Logo UrbanKicks"
+                        class="w-8 h-8 object-contain" />
+                    <p class="font-semibold">UrbanKicks</p>
+                    <p class="text-slate-600 mt-2">La mejor para ti</p>
+                </div>
+                <div>
+                    <p class="font-semibold">Secciones</p>
+                    <ul class="mt-2 space-y-2 text-slate-600">
+                        <li><a href="#productos" class="hover:text-slate-950">Productos</a></li>
+                        <li><a href="#marcas" class="hover:text-slate-950">Marcas</a></li>
+                        <li><a href="#stores" class="hover:text-slate-950">Tiendas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-semibold">Ayuda</p>
+                    <ul class="mt-2 space-y-2 text-slate-600">
+                        <li><a href="#help" class="hover:text-slate-950">Soporte</a></li>
+                        <li><a href="#help" class="hover:text-slate-950">Envíos</a></li>
+                        <li><a href="#help" class="hover:text-slate-950">Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div>
+
+
+                </div>
+            </div>
+
+            <div
+                class="mt-6 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
+
+                <p>los mejores en la venta de zapatos</p>
+                <p>si te gusto Contactanos</p>
+            </div>
+        </div>
+    </footer>
+
     <script type="module" src="../js/carrito.js"></script>
 </body>
+
 </html>
