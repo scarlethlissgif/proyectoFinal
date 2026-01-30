@@ -1,15 +1,14 @@
 import '../css/style.css';
-import 'flowbite';
 
 const lista = document.getElementById("lista-carrito");
 const totalPago = document.getElementById("total-compra");
 const btnLimpiar = document.getElementById("btn-limpiar");
+const contadorNav = document.getElementById("cart-count");
 
 let carrito = JSON.parse(localStorage.getItem("carrito-urbankicks")) || [];
 
 const actualizarContador = () => {
-    const contador = document.querySelector(".absolute.-top-2.-right-2");
-    if (contador) contador.innerText = carrito.length;
+    if (contadorNav) contadorNav.innerText = carrito.length;
 };
 
 const mostrarCarrito = () => {
@@ -18,51 +17,53 @@ const mostrarCarrito = () => {
     let total = 0;
 
     if (carrito.length === 0) {
-        lista.innerHTML = `<p class="text-center text-slate-500 py-10">Tu carrito está vacío.</p>`;
+        lista.innerHTML = `<div class="py-10 text-slate-400 text-lg">Tu carrito está vacío actualmente.</div>`;
         totalPago.innerText = "$0.00";
         actualizarContador();
         return;
     }
 
     carrito.forEach((prod, index) => {
-        total += parseFloat(prod.precio);
+        const precio = Number(prod.precio) || 0;
+        total += precio;
 
         lista.innerHTML += `
-            <div class="flex items-center justify-between border-b border-slate-200 py-4">
-                <div class="flex items-center gap-4">
-                    <img src="${prod.imagen}" class="w-16 h-16 object-cover rounded-lg">
-                    <div>
-                        <p class="font-bold text-slate-800">${prod.titulo}</p>
-                        <p class="text-indigo-600 font-bold">$${prod.precio}</p>
-                    </div>
+            <div class="border-t border-slate-300 py-6 flex justify-between items-center">
+                <p class="text-xl font-bold text-slate-900">${prod.titulo}</p>
+                <div class="text-right">
+                    <p class="text-xl font-bold text-orange-600">$${precio.toFixed(2)}</p>
+                    <button data-index="${index}" class="btn-eliminar text-sm text-red-400 hover:text-red-600 font-medium">
+                        Eliminar
+                    </button>
                 </div>
-                <button data-index="${index}" class="btn-eliminar text-red-500 hover:text-red-700 p-2">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
             </div>
         `;
     });
 
+    // Línea final decorativa
+    lista.innerHTML += `<div class="border-t border-slate-300"></div>`;
+    
     totalPago.innerText = `$${total.toFixed(2)}`;
     actualizarContador();
 };
 
-// Evento para eliminar
+// Eliminar un producto
 lista?.addEventListener("click", (e) => {
-    const boton = e.target.closest(".btn-eliminar");
-    if (boton) {
-        const index = parseInt(boton.dataset.index);
+    if (e.target.classList.contains("btn-eliminar")) {
+        const index = parseInt(e.target.dataset.index);
         carrito.splice(index, 1);
         localStorage.setItem("carrito-urbankicks", JSON.stringify(carrito));
         mostrarCarrito();
     }
 });
 
-// Evento para limpiar
+// Limpiar todo
 btnLimpiar?.addEventListener("click", () => {
-    carrito = [];
-    localStorage.setItem("carrito-urbankicks", JSON.stringify(carrito));
-    mostrarCarrito();
+    if (confirm("¿Estás seguro de que quieres vaciar el carrito?")) {
+        carrito = [];
+        localStorage.setItem("carrito-urbankicks", JSON.stringify(carrito));
+        mostrarCarrito();
+    }
 });
 
 mostrarCarrito();
