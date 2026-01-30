@@ -42,5 +42,20 @@ document.addEventListener("click", (e) => {
         }, 800);
     }
 });
+const banner = document.querySelector("#banner");
+const cambiarAnuncio = () =>{
+
+    if(banner.innerText === "ENVIO GRATUITO EN PEDIDOS SUPERIORES A $100"){
+        banner.innerText="Rebajas hasta el 50% - compra ahora";
+        banner.classList.remove("bg-black");
+        banner.classList.add("bg-red-700");
+    }else{
+        banner.innerText="ENVIO GRATUITO EN PEDIDOS SUPERIORES A $100"
+
+        banner.classList.remove("bg-red-700");
+        banner.classList.add("bg-black");
+    }
+}
+banner.addEventListener(`click`, cambiarAnuncio);
 
 actualizarContadorGlobal();

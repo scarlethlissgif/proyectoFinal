@@ -1,9 +1,9 @@
 import '../css/style.css'
 import 'flowbite'
 
-/**
- * Función para sincronizar el contador del carrito con el almacenamiento local.
- */
+ 
+ //Función para sincronizar el contador del carrito con el almacenamiento local.
+ 
 const actualizarContadorGlobal = () => {
     // 1. Obtener el carrito actual de UrbanKicks
     const carrito = JSON.parse(localStorage.getItem("carrito-urbankicks")) || [];
@@ -31,6 +31,26 @@ const actualizarContadorGlobal = () => {
 document.addEventListener("DOMContentLoaded", () => {
     actualizarContadorGlobal();
     
+
     // Efecto de entrada para las secciones de texto (Opcional)
     console.log("Página Nosotros cargada correctamente.");
+
+  const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove("opacity-0");
+                entry.target.classList.remove("translate-y-8");
+                entry.target.classList.remove("translate-x-8");
+                entry.target.classList.remove("scale-95");
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    document.querySelectorAll(
+        ".historia, .imagen-historia, .texto-historia, .valor-card"
+    ).forEach(el => observer.observe(el));
+    
 });
+

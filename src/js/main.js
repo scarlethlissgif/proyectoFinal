@@ -1,10 +1,10 @@
 import '../css/style.css';
 import 'flowbite';
 
-// 1. Inicializar carrito desde localStorage
+// 1. Inicializar carrito desde  - trae los productos guardados 
 let carrito = JSON.parse(localStorage.getItem("carrito-urbankicks")) || [];
 
-// 2. Función para actualizar el número pequeño del icono del carrito
+// 2. Función para actualizar el número  del carrito
 const actualizarContadorGlobal = () => {
     const contadores = document.querySelectorAll("#carrito-contador, .absolute.-top-2.-right-2");
     contadores.forEach(c => {
@@ -39,5 +39,8 @@ document.addEventListener("click", (e) => {
     }
 });
 
+
 // Ejecutar al cargar la página
 actualizarContadorGlobal();
+
+
