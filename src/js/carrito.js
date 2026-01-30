@@ -1,64 +1,69 @@
-import '../css/style.css'; 
-import 'flowbite';
+import '../css/style.css';
 
-//declaramos constantes
 const lista = document.getElementById("lista-carrito");
-const totalPago= document.getElementById("total-compra");
+const totalPago = document.getElementById("total-compra");
 const btnLimpiar = document.getElementById("btn-limpiar");
+const contadorNav = document.getElementById("cart-count");
 
-//traer la informacion de la memoria del localStorege
-let libroCarrito = JSON.parse(localStorage.getItem("carrito-libros"))||[];
+let carrito = JSON.parse(localStorage.getItem("carrito-urbankicks")) || [];
 
-const actualizarContado = () =>{
-    const contador  = document.getElementById("carrito-contador");
-    //si existe el contador le pongamos la longitud deñ carrito
-    if(contador) 
-        contador.innerText=libroCarrito.length;
+const actualizarContador = () => {
+    if (contadorNav) contadorNav.innerText = carrito.length;
 };
 
-const mostrarCarrito= ()=>{
+const mostrarCarrito = () => {
+    if (!lista) return;
     lista.innerHTML = "";
     let total = 0;
 
-    libroCarrito.forEach((libro, index) => {
-        total += parseFloat(libro.precio);
+    if (carrito.length === 0) {
+        lista.innerHTML = `<div class="py-10 text-slate-400 text-lg">Tu carrito está vacío actualmente.</div>`;
+        totalPago.innerText = "$0.00";
+        actualizarContador();
+        return;
+    }
 
-        //CARRITO
+    carrito.forEach((prod, index) => {
+        const precio = Number(prod.precio) || 0;
+        total += precio;
+
         lista.innerHTML += `
-            <div class="flex justify-between items-center border-b border-slate-700 py-4">
-                <p class="font-bold">${libro.titulo}</p>
-                <div class="flex items-center gap-4">
-                    <span class="text-orange-600 font-bold">$${libro.precio}</span>
-                    <button data-index="${index}" class="btn-eliminar text-red-800 text-xs">Eliminar</button>
+            <div class="border-t border-slate-300 py-6 flex justify-between items-center">
+                <p class="text-xl font-bold text-slate-900">${prod.titulo}</p>
+                <div class="text-right">
+                    <p class="text-xl font-bold text-orange-600">$${precio.toFixed(2)}</p>
+                    <button data-index="${index}" class="btn-eliminar text-sm text-red-400 hover:text-red-600 font-medium">
+                        Eliminar
+                    </button>
                 </div>
             </div>
         `;
     });
-totalPago.innerText=`$${total.toFixed(2)}`;
-actualizarContado();
-;}
 
-lista.addEventListener("click", (e) => {
-    const boton = e.target.closest(".btn-eliminar");
-    if(boton){
-        const index = parseInt(boton.dataset.index);
-        //Eliminar el libro del carrito basandose en la posicion seleccionada
-        libroCarrito.splice(index, 1); //splice es un metodo para eliminar
-        //actualizar los datos
-        localStorage.setItem("carrito-libros", JSON.stringify(libroCarrito));
+    // Línea final decorativa
+    lista.innerHTML += `<div class="border-t border-slate-300"></div>`;
+    
+    totalPago.innerText = `$${total.toFixed(2)}`;
+    actualizarContador();
+};
+
+// Eliminar un producto
+lista?.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-eliminar")) {
+        const index = parseInt(e.target.dataset.index);
+        carrito.splice(index, 1);
+        localStorage.setItem("carrito-urbankicks", JSON.stringify(carrito));
         mostrarCarrito();
     }
-})
+});
 
-btnLimpiar.addEventListener("click", () => {
-    // 1. Vaciar el arreglo en memoria
-    libroCarrito = [];
-
-    // 2. Sincronizar el localStorage (guardarlo vacío)
-    localStorage.setItem("carrito-libros", JSON.stringify(libroCarrito));
-
-    // 3. Volver a pintar la interfaz (mostrará la lista vacía y total $0.00)
-    mostrarCarrito();
+// Limpiar todo
+btnLimpiar?.addEventListener("click", () => {
+    if (confirm("¿Estás seguro de que quieres vaciar el carrito?")) {
+        carrito = [];
+        localStorage.setItem("carrito-urbankicks", JSON.stringify(carrito));
+        mostrarCarrito();
+    }
 });
 
 mostrarCarrito();
